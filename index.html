@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valentine 💖</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating hearts -->
+  <div class="hearts"></div>
+
+  <!-- Music Button -->
+  <button class="music-btn" id="musicBtn">🔊 Play Music</button>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" loop>
+    <!-- Put your music file name here -->
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- PAGE 1 -->
+  <section class="page active" id="page1">
+    <h1>Will you be my Valentine? 💘</h1>
+    <p class="sub">Choose wisely 😌</p>
+
+    <div class="btn-row">
+      <button class="btn yes" onclick="yesAction(2)">Yes 💖</button>
+      <button class="btn no" id="noBtn1">No 😶</button>
+    </div>
+  </section>
+
+  <!-- PAGE 2 -->
+  <section class="page" id="page2">
+    <h1>I have a gift for you 🎁</h1>
+    <p class="sub">Do you want to accept it?</p>
+
+    <div class="btn-row">
+      <button class="btn yes" onclick="yesAction(3)">Yes 😍</button>
+      <button class="btn no" onclick="goToPage(4)">No 🙄</button>
+    </div>
+  </section>
+
+  <!-- PAGE 3 (CARD) -->
+  <section class="page" id="page3">
+    <h1>💌 Special Gift Card</h1>
+
+    <!-- Cute GIF -->
+    <img
+      class="cute-gif"
+      src="MY.gif"
+      alt="Cute Love Gif"
+    />
+
+    <div class="card">
+      <h2> Tanishq 💖</h2>
+      <p>
+        You are the cutest part of my life 🥺✨ <br />
+        Thank you for existing ❤️ <br />
+        Happy Valentine’s Day 💘
+      </p>
+      <p class="from">— Yours forever 😌💞</p>
+    </div>
+
+    <button class="btn small" onclick="goToPage(1)">Replay 🔁</button>
+  </section>
+
+  <!-- PAGE 4 (FORCED YES) -->
+  <section class="page" id="page4">
+    <h1>😤 You are NOT capable to reject my gift!</h1>
+    <p class="sub">Only one option is allowed 😈</p>
+
+    <div class="btn-row">
+      <button class="btn yes" onclick="yesAction(3)">Yes ✅</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
