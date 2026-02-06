@@ -56,7 +56,7 @@ h.style.left=Math.random()*100+"vw";
 hearts.appendChild(h);
 setTimeout(()=>h.remove(),6000);
 }
-setInterval(createHeart,150);
+setInterval(createHeart,300);
 
 // Confetti
 function popConfetti(){
